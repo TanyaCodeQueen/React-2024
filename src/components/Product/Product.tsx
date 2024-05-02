@@ -5,23 +5,29 @@ export interface IProductProps{
     title: string,
     description: string,
     price: number,
-    discountPercentage?: number,
+    discountPercentage: number,
     rating: number,
     stock: number,
     brand: string,
     category: string,
-    thumbnail?: string,
+    thumbnail: string,
     images: string[];
 
 }
 export type IProductTypeProps = IProductProps & {children?:React.ReactNode};
 
-const Product: FC<IProductTypeProps> = ({id,title,description,price,rating,stock,brand,category,images}) => {
+const Product: FC<IProductTypeProps> = ({id,title,description,price, discountPercentage,rating,stock,brand,category,thumbnail,images}) => {
     return (
-        <div>
-            <h2>{title}.{description}.{price}</h2>
-            <h3>{rating}.{stock}.{brand}.{category}</h3>
-            <div className={styles.parentDiv}>
+        <div className={styles.outerDiv}>
+            <div className={styles.infoDiv}>
+                <h2 className={styles.infoDivChild}>Title: {title} <br/>Description: {description} <br/>Price: {price} Discount: {discountPercentage} <br/> Rating:{rating} <br/>In stock: {stock} <br/>Brand:{brand} <br/> Category:{category}</h2>
+
+            </div>
+            <div className={styles.thumbDiv}>
+                <img className={styles.thumbnail} src={thumbnail} alt=""/>
+            </div>
+
+            <div className={styles.parentImgDiv}>
                 {images.map((image, index) => <img className={styles.img} key={index} src={image} alt=""/>)}
             </div>
 
