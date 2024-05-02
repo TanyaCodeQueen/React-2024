@@ -1,0 +1,14 @@
+.img{
+    width: 17%;
+   height: 200px;
+  margin-right: 10px;
+}
+.parentDiv{
+    width:100vw;
+
+    display:flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
