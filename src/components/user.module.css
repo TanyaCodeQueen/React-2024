@@ -1,0 +1,49 @@
+
+
+.outerDiv {
+    width:50vw;
+    margin: 10px; /* Додаткові відступи між блоками */
+    background-color: #d3abfc;
+    height:20vh;
+}
+
+
+    .userDetails{
+    text-align: start;
+        width: calc(100% - 30px);
+        height:25%;
+        background-color: #b0cffc;
+        padding-left: 30px;
+        font-size: 18px;
+
+
+}
+
+    .addressDetails{
+        text-align: start;
+        width: calc(100% - 30px);
+
+        height:25%;
+        padding-left: 30px;
+        font-size: 17px;
+        margin-top: -10px;
+
+    }
+
+     .companyDetails{
+         text-align: start;
+         width: calc(100% - 30px);
+
+         height:30%;
+         padding-left: 30px;
+         font-size: 17px;
+
+
+     }
+
+.btn{
+   margin-top: 60px;
+    width: 10vw;
+    height: 6vh;
+
+}
