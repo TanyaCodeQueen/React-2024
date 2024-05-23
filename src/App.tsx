@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React , {useState} from 'react';
+import {UsersComponent} from "./components/users-component/UsersComponent";
+import TodosComponent from "./components/todos-component/TodosComponent";
 
-function App() {
+
+
+
+const App=()=> {
+  const [userId,setUserId]=useState(0)
+  const choseUser = (id:number) => {
+   setUserId(id)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <UsersComponent choseUser={choseUser}/>
+          {!!userId && <TodosComponent userId={userId}/>}
+
+      </div>
+
   );
 }
 
